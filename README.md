@@ -10,6 +10,7 @@
     - [Properties](#properties)
 1. [CSS](#css)
     - [Formatting](#formatting)
+    - [Property order](#property-order)
     - [Comments](#comments)
     - [OOCSS and BEM](#oocss-and-bem)
     - [ID Selectors](#id-selectors)
@@ -109,6 +110,36 @@ Finally, properties are what give the selected elements of a rule declaration th
 .selector,
 .per-line {
   // ...
+}
+```
+
+### Property order
+Use the Layout Box Visual Type grouping to sort your properties. See https://pyx.space/post/keys-to-maintainable-css-order for more information.
+
+**Bad**
+
+```css
+.avatar {
+    background: blue;
+    border:2px solid white;
+    display: block;
+    font-size: 12px;
+    position: absolute;
+}
+```
+
+**Good**
+
+```css
+.avatar {
+    position: absolute;
+    
+    display: block;
+    
+    background: blue;
+    border:2px solid white;
+    
+    font-size: 12px;
 }
 ```
 
